@@ -22,7 +22,7 @@ final class ApplicationAction {
      * Click Vytvorit novou prihlasku on table view
      */
     void clickCreateNewApplicationButton() {
-        var createApplicationButton = elementFinder.findByCssSelector(".card-header a");
+        var createApplicationButton = elementFinder.findByCssSelector(".btn-sm");
         createApplicationButton.click();
     }
 
@@ -32,10 +32,10 @@ final class ApplicationAction {
     }
 
     /**
-     * Click Vytvorit prihlasku for Python course
+     * Click Vytvorit prihlasku for Javascript course
      */
     void clickCreateApplicationButton() {
-        var createApplicationButton = elementFinder.findByCssSelector(".card-body a");
+        var createApplicationButton = elementFinder.findByCssSelector(".btn-primary");
         createApplicationButton.click();
     }
 
@@ -56,4 +56,23 @@ final class ApplicationAction {
                 "//tr[1]//a[@title='Upravit']");
         firstApplicationEditButton.click();
     }
+
+    void clickCancelFirstApplicationButton() {
+        var firstApplicationCancelButton = elementFinder.findByCssSelector(".btn-danger");
+        firstApplicationCancelButton.click();
+    }
+
+    void clickReasonIllButton() {
+        var cancelAppReasonIll = elementFinder.findByCssSelector("label.custom-control-label[for='logged_out_illness']");
+        cancelAppReasonIll.click();
+    }
+
+    void submitCancelButton() {
+        var submitCancellation = elementFinder.findByCssSelector(".btn-primary");
+        submitCancellation.click();
+    }
+
+
+
 }
+

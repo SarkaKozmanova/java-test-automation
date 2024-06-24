@@ -44,7 +44,7 @@ final class ApplicationDetail {
     }
 
     void insertNote(String note) {
-        var noteInput = elementFinder.findByXPath("//*[@id='note']");
+        var noteInput = elementFinder.findByCssSelector("#note");
         noteInput.sendKeys(note);
     }
 
@@ -55,8 +55,7 @@ final class ApplicationDetail {
     }
 
     void clickCreateApplicationButton() {
-        var createButton = elementFinder.findByXPath(
-                "//input[@type='submit']");
+        var createButton = elementFinder.findByCssSelector(".btn-primary");
         createButton.click();
     }
 
