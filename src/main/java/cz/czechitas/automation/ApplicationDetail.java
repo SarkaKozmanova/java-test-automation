@@ -44,7 +44,7 @@ final class ApplicationDetail {
     }
 
     void insertNote(String note) {
-        var noteInput = elementFinder.findByXPath("/html/body/div/div/div/div/div/form/table/tbody/tr[10]/td[2]/textarea");
+        var noteInput = elementFinder.findByCssSelector("#note");
         noteInput.sendKeys(note);
     }
 
@@ -55,8 +55,7 @@ final class ApplicationDetail {
     }
 
     void clickCreateApplicationButton() {
-        var createButton = elementFinder.findByXPath(
-                "//html/body/div/div/div/div/div/form/table/tbody/tr[11]/td[2]/input");
+        var createButton = elementFinder.findByCssSelector(".btn-primary");
         createButton.click();
     }
 
